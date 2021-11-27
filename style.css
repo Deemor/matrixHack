@@ -1,0 +1,95 @@
+#mainSpot
+{
+    display:none;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:50px;
+    width:1150px;
+    height:650px;
+    background-color: black;
+}
+#game
+{
+
+    width:930px;
+    height:469px;
+    margin-left:auto;
+    margin-right:auto;
+}
+#textBox
+{
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    width:930px;
+    height:469px;
+    margin-left:auto;
+    margin-right:auto;
+}
+#progress
+{
+    margin-left:auto;
+    margin-right:auto;
+    width:929px;
+    height:117px;
+}
+#matrix
+{
+    margin-left:auto;
+    margin-right:auto;
+    width:390px;
+    height:390px;
+    margin-top: 10px;
+}
+#answer
+{
+    margin-top:10px;
+    font-family: 'Nanum Gothic Coding';
+    font-size:20px;
+    width:100px;
+    text-align: center; 
+    background-color:black; 
+    border-color:#4a235a; 
+    color:#b47fc8 !important;
+    border-width: 1px; 
+    margin-left:auto;
+    margin-right:auto;
+}
+#answer:focus
+{
+    color:#b47fc8 !important;
+    caret-color: #b47fc8;
+}
+
+.square
+{
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    text-align: center;
+    color:white;
+    font-size:72px;
+    position:fixed;
+    width:118px;
+    height:118px;
+    margin:5px;
+    background-color:#4a235a;
+}
+#frameRow
+{
+    width:386px;
+    height:126px;
+    position:fixed;
+    border-style: solid;
+    border-color: red;
+    border-width: 2px;
+}
+#frameColumn
+{
+    width:126px;
+    height:386px;
+    position:fixed;
+    border-style: solid;
+    border-color: red;
+    border-width: 2px;
+}

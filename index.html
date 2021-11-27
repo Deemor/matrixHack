@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+	  	<meta charset="utf-8" />
+	  	<title>???</title>
+	  	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap" rel="stylesheet"> 
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+		<link href="style.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src="src/matrixHack.js" defer></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap" rel="stylesheet"> 
+	</head>
+
+	<body style="background-color: #1b1b1b; ">
+		<div id="buttonDiv">
+			<div class="container-fluid" id="terminal" style="position:absolute; top:25%; ">
+				<p id="terminalText" class="h1 text-white d-flex justify-content-center mt-2 mb-2" style="font-family: 'Nanum Gothic Coding';">
+					<button type="button" class="btn btn-primary btn-lg" id="buttonStart">Start hack</button>
+				</p>
+			</div>
+			<nav class="navbar fixed-bottom navbar-dark bg-dark">
+				<div class="row w-100 px-5">
+					<div class="col w-25">
+						<p class="h5 d-flex justify-content-left mt-2 mb-2" style="color:#33da6a;">
+							Ilosc przemieszczen	&nbsp;&nbsp;
+							<span class="badge bg-success" id="amountBadge">x</span>
+						</p>
+						<input type="range" class="form-range" min="1" max="8" step="1" id="amount" oninput="amountChange()">
+					</div>
+					<div class="col w-25">
+						<p class="h5 d-flex justify-content-left mt-2 mb-2" style="color:#33da6a;">
+							Czas na odpowiedz	&nbsp;&nbsp;
+							<span class="badge bg-success" id="timeToCheckBadge">x</span>
+						</p>
+						<input type="range" class="form-range" min="2" max="30" step="1" id="timeToCheck" oninput="timeToCheckChange()">
+					</div>
+					<div class="col w-25">
+						<p class="h5 d-flex justify-content-left mt-2 mb-2" style="color:#33da6a;">
+							Czas na zapamietanie	&nbsp;&nbsp;
+							<span class="badge bg-success" id="timeToRememberBadge">x</span>
+						</p>
+						<input type="range" class="form-range" min="2" max="30" step="1" id="timeToRemember" oninput="timeToRememberChange()">
+					</div>
+				</div>
+				<a class="navbar-brand p-3" href="#">???</a>
+			  </nav>
+		</div>
+
+		<div id="mainSpot" class="pt-5">
+			<div id="textBox" >
+				<div class="h1 text-white text-center" style="margin-top:190px;" id="text">PRZYGOTUJ SIĘ</div>
+			</div>
+			<div id="game" style="display:none;" >
+
+				<div id="matrix">
+
+				</div>
+				<input autofocus type="text" class="form-control text-success" id="answer" id="answer" placeholder="123" spellcheck="false" name="answer">
+
+			</div>
+			<div class="container">
+				<div class="row align-content-center" id="progress">
+					<div class="col-9 p-0" id="progressBox">
+						<div class="progress  m-1 mt-4 mb-3" style="height: 2px; width:100%; background-color: black;">
+							<div class="" role="progressbar" id="progress-bar" style=" background-color: white;" ></div>
+						</div>
+					</div>
+					<div class="col-3 p-0 text-end">
+						<p class="h3 text-white text-end" id="navText">MatrixHack</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="updateDiv"></div>
+		
+
+		
+		
+		<script>
+			var defaut_timeToCheck = 5;
+			var default_timeToRemember = 10;
+			var default_amount = 3;
+			document.getElementById("amountBadge").innerHTML=String(default_amount);
+			document.getElementById("amount").value=default_amount;
+
+			document.getElementById("timeToCheckBadge").innerHTML=String(defaut_timeToCheck);
+			document.getElementById("timeToCheck").value=defaut_timeToCheck;
+
+			document.getElementById("timeToRememberBadge").innerHTML=String(default_timeToRemember);
+			document.getElementById("timeToRemember").value=default_timeToRemember;
+
+		
+		
+
+			function timeToCheckChange(){
+				document.getElementById("timeToCheckBadge").innerHTML=document.getElementById("timeToCheck").value;
+			}
+			function timeToRememberChange(){
+				document.getElementById("timeToRememberBadge").innerHTML=document.getElementById("timeToRemember").value;
+			}
+			function amountChange(){
+				document.getElementById("amountBadge").innerHTML=document.getElementById("amount").value;
+			}
+		</script>
+	</body>
+</html>
+
