@@ -14,7 +14,7 @@ var timeToRemember = 0;
 var timeToCheck = 0;
 const SQUARE_SIZE = 100;
 const SQUARE_MARGIN = 15;
-const SHUFFLE_TIME = 3;
+const SHUFFLE_TIME = 4;
 const TIME_TO_PREPARE = 2;
 async function getPosition(x,y)
 {
